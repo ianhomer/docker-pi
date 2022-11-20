@@ -11,3 +11,4 @@ Then
 
     docker compose -f ./docker-compose-pi-hole.yml up -d
     docker compose -f ./docker-compose-gitea.yml up -d
+    docker compose -f ./docker-compose-rpi-monitor.yml up -d
