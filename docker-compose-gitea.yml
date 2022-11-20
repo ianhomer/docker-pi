@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  server:
+    image: kunde21/gitea-arm:latest
+    container_name: gitea
+    restart: always
+    volumes:
+      - ./data:/var/lib/gitea
+      - ./config:/etc/gitea
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    ports:
+     - "8081:3000"
+     - "2222:2222"
