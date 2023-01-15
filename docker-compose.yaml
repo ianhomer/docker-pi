@@ -16,11 +16,14 @@ services:
     # mkdir -p /services/config/jellyfin
     # mkdir -p /services/data/music
     #
-    # 8086 : web admin
+    # 8096 : web admin
     # 1900 : DNLA / UPnP
     image: jellyfin/jellyfin:latest
     restart: unless-stopped
     network_mode: "host"
+    ports:
+      - 8096:8096
+      - 1900:1900
     volumes:
       - /services/config/jellyfin:/config
       - /services/data/music:/music
