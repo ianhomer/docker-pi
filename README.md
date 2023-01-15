@@ -1,6 +1,6 @@
 # Docker Pi
 
-Some docker patterns for install on Pi.
+Docker services for install on Pi.
 
 ## Getting started
 
@@ -17,9 +17,4 @@ Then make service directories
 
 Then
 
-    docker compose -f ./docker-compose-homepage.yaml up -d
-    docker compose -f ./docker-compose-jellyfin.yaml up -d
-
-## Troubleshooting
-
-
+    docker compose -f docker-compose.yaml up -d
