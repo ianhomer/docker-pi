@@ -1,0 +1,11 @@
+# mkdir -p /services/config/homepage
+version: "3.3"
+services:
+  homepage:
+    image: ghcr.io/benphelps/homepage:latest
+    container_name: homepage
+    ports:
+      - 3000:3000
+    volumes:
+      - /services/config/homepage:/app/config
+      - /var/run/docker.sock:/var/run/docker.sock:ro # For docker integrations

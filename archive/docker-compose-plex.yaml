@@ -1,0 +1,13 @@
+# mkdir -p ~/media/plex/{config,data}
+
+version: '3'
+services:
+  plex:
+    image: greensheep/plex-server-docker-rpi
+    restart: unless-stopped
+    volumes:
+      - ./media/plex/config:/config
+      - ./media/plex/data:/data
+    ports:
+      - 8084:32400
+

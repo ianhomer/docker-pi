@@ -1,0 +1,19 @@
+# mkdir -p ~/media/plex/{library,tv,movies}
+
+---
+version: "2.1"
+services:
+  plex-media:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex-media
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - PLEX_CLAIM= #optional
+    volumes:
+      - ./meda/plex/library:/config
+      - ./meda/plex/tv:/tv
+      - ./meda/plex/movies:/movies
+    restart: unless-stopped

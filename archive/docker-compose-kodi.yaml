@@ -1,0 +1,7 @@
+version: '3'
+services:
+  kodi:
+    image: celedhrim/kodi-server
+    restart: unless-stopped
+    ports:
+      - 8083:8089
